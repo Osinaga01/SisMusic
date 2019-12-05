@@ -3,10 +3,15 @@
 namespace App\Http\Controllers\Auth;
 
 use App\User;
+use App\Perfil;
+use App\Estudiante;
 use App\Http\Controllers\Controller;
 use Illuminate\Support\Facades\Hash;
 use Illuminate\Support\Facades\Validator;
 use Illuminate\Foundation\Auth\RegistersUsers;
+
+use Spatie\Permission\Models\Role;
+use Spatie\Permission\Models\Permission;
 
 class RegisterController extends Controller
 {
@@ -28,7 +33,7 @@ class RegisterController extends Controller
      *
      * @var string
      */
-    protected $redirectTo = '/home';
+    protected $redirectTo = '/sismusic';
 
     /**
      * Create a new controller instance.
@@ -63,10 +68,28 @@ class RegisterController extends Controller
      */
     protected function create(array $data)
     {
-        return User::create([
+        $user = User::create([
             'name' => $data['name'],
             'email' => $data['email'],
             'password' => Hash::make($data['password']),
-        ]);
+        ],);
+        // $user->perfil()->save(new Perfil);
+        // $perfil = new Perfil;
+        // $perfil->estudiante()->save(new estudiante);
+        //$perfil->save();
+        //$perfil()->estudiante()->save(new Estudiante);
+        $user->perfil()->save(new Perfil);
+        $user->estudiante()->save(new Estudiante);
+
+        $user->assignRole(3);
+        return $user;
+        // $user->role()->attach(Role::where('name', 'Estudiante')->first());
+        // return $user;
+        // $permissions = Permission::pluck('id','2')->all();
+
+        // $role->syncPermissions($permissions);
+
+        // $user->assignRole(['2']);
+        // return $user;
     }
 }

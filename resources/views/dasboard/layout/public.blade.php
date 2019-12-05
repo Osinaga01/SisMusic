@@ -66,16 +66,17 @@
                     <div class="navbar-collapse " id="navbar-mobile">
                        
                         <div class="mr-auto float-left bookmark-wrapper d-flex align-items-center">
-                            <ul class="nav navbar-nav nav-back">
+                            {{-- <ul class="nav navbar-nav nav-back">
                                 <li class="nav-item mobile-menu d-xl-none mr-auto"><a class="nav-link nav-menu-main hidden-xs font-small-3" href="sk-layout-2-columns.html"><i class="feather icon-arrow-left"></i>Back</a></li>
-                            </ul>
+                            </ul> --}}
                             <ul class="nav navbar-nav bookmark-icons">
                                 <!-- li.nav-item.mobile-menu.d-xl-none.mr-auto-->
                                 <!--   a.nav-link.nav-menu-main.menu-toggle.hidden-xs(href='#')-->
                                 <!--     i.ficon.feather.icon-menu-->
-                                <li class="nav-item d-none d-lg-block"><a class="nav-link" href="sk-layout-1-column.html" data-toggle="tooltip" data-placement="top" title="1-Column"><i class="ficon feather icon-file-text"></i></a></li>
+                                <li class="nav-item d-none d-lg-block"><a class="nav-link nav-link-expand"><i class="ficon feather icon-maximize"></i></a></li>
+                                {{-- <li class="nav-item d-none d-lg-block"><a class="nav-link" href="sk-layout-1-column.html" data-toggle="tooltip" data-placement="top" title="1-Column"><i class="ficon feather icon-file-text"></i></a></li>
                                 <li class="nav-item d-none d-lg-block"><a class="nav-link" href="sk-layout-2-columns.html" data-toggle="tooltip" data-placement="top" title="2-Columns"><i class="ficon feather icon-sidebar"></i></a></li>
-                                <li class="nav-item d-none d-lg-block"><a class="nav-link" href="sk-layout-static.html" data-toggle="tooltip" data-placement="top" title="Static Layout"><i class="ficon feather icon-sliders"></i></a></li>
+                                <li class="nav-item d-none d-lg-block"><a class="nav-link" href="sk-layout-static.html" data-toggle="tooltip" data-placement="top" title="Static Layout"><i class="ficon feather icon-sliders"></i></a></li> --}}
                             </ul>
                             <ul class="nav navbar-nav">
                                 <li class="nav-item d-none d-lg-block"><a class="nav-link bookmark-star"><i class="ficon feather icon-star warning"></i></a>
@@ -91,11 +92,28 @@
                                 </li>
                             </ul>
                         </div>
+                        
                         <ul class="nav navbar-nav float-right">
+                        
+                            <li class="dropdown dropdown-language nav-item">
+                                @can('ver-admin')
+                                <a class="nav-link" id="dropdown-flag" href="{{ ('/adm') }}" >
+                                    <i class="ficon feather icon-server"></i>
+                                    <span class="selected-language">Admin |</span>
+                                </a> 
+                                @endcan        
+                            </li>
+                        
+                            <li class="dropdown dropdown-language nav-item">
+                                <a class="nav-link" id="dropdown-flag" href="{{ ('/piano') }}" >
+                                    <i class="ficon feather icon-bar-chart-2"></i>
+                                    <span class="selected-language">Piano |</span>
+                                </a>         
+                            </li>
                             <li class="dropdown dropdown-language nav-item">
                               <a class="dropdown-toggle nav-link" id="dropdown-flag" href="#" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                                {{-- <i class="flag-icon flag-icon-us"></i> --}}
-                                <span class="selected-language">Opcion</span></a>
+                                <i class="ficon feather icon-chevron-down"></i>
+                                <span class="selected-language">Opcion |</span></a>
                                 <div class="dropdown-menu" aria-labelledby="dropdown-flag">
                                   <a class="dropdown-item" href="#" data-language="en">
                                   <i class="flag-icon flag-icon-us"></i> English</a>
@@ -110,8 +128,8 @@
                             </li>
                             <li class="dropdown dropdown-language nav-item">
                                 <a class="dropdown-toggle nav-link" id="dropdown-flag" href="#" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                                  {{-- <i class="flag-icon flag-icon-us"></i> --}}
-                                  <span class="selected-language">Opcion</span></a>
+                                  <i class="ficon feather icon-chevron-down"></i>
+                                  <span class="selected-language">Opcion |</span></a>
                                   <div class="dropdown-menu" aria-labelledby="dropdown-flag">
                                     <a class="dropdown-item" href="#" data-language="en">
                                     <i class="flag-icon flag-icon-us"></i> English</a>
@@ -124,7 +142,7 @@
                                   </div>
                                   
                               </li>
-                            <li class="nav-item d-none d-lg-block"><a class="nav-link nav-link-expand"><i class="ficon feather icon-maximize"></i></a></li>
+                            {{-- <li class="nav-item d-none d-lg-block"><a class="nav-link nav-link-expand"><i class="ficon feather icon-maximize"></i></a></li>
                             <li class="nav-item nav-search"><a class="nav-link nav-link-search"><i class="ficon feather icon-search"></i></a>
                                 <div class="search-input">
                                     <div class="search-input-icon"><i class="feather icon-search primary"></i></div>
@@ -132,8 +150,8 @@
                                     <div class="search-input-close"><i class="feather icon-x"></i></div>
                                     <ul class="search-list"></ul>
                                 </div>
-                            </li>
-                            <li class="dropdown dropdown-notification nav-item"><a class="nav-link nav-link-label" href="#" data-toggle="dropdown"><i class="ficon feather icon-bell"></i><span class="badge badge-pill badge-primary badge-up">5</span></a>
+                            </li> --}}
+                            {{-- <li class="dropdown dropdown-notification nav-item"><a class="nav-link nav-link-label" href="#" data-toggle="dropdown"><i class="ficon feather icon-bell"></i><span class="badge badge-pill badge-primary badge-up">5</span></a> --}}
                                 <ul class="dropdown-menu dropdown-menu-media dropdown-menu-right">
                                     <li class="dropdown-menu-header">
                                         <div class="dropdown-header m-0 p-2">
@@ -193,13 +211,25 @@
                                 </ul>
                             </li>
                         @if (Auth::guest())
-                            <li class="nav-item">
+                            <li class="dropdown dropdown-language nav-item">
+                                <a class="dropdown-toggle nav-link" id="dropdown-flag" href="#" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                  <i class="ficon feather icon-chevron-down"></i>
+                                  <span class="selected-language">Autenticar |</span></a>
+                                  <div class="dropdown-menu" aria-labelledby="dropdown-flag">
+                                    <a class="dropdown-item" href="{{ route('login') }}" data-language="en">
+                                    <i class="ficon feather icon-unlock"></i> Login</a>
+                                    <a class="dropdown-item" href="{{ route('register') }}" data-language="fr">
+                                    <i class="ficon feather icon-user-plus"></i>Register</a>
+                                  </div> 
+                            </li>
+                            {{-- <li class="nav-item">
                                 <a class="nav-link" href="{{ route('login') }}">{{ __('Login') }}</a>
                                 </li>
                                     
                                 <li class="nav-item">
                                     <a class="nav-link" href="{{ route('register') }}">{{ __('Register') }}</a>
-                                </li>
+                                </li> --}}
+                            <li class="nav-item d-none d-lg-block" style="margin-top:50px:"><a class="nav-link" ><i class="ficon feather icon-target"></i></a></li>
                                 
                         @else
                                     <li class="dropdown dropdown-user nav-item"><a class="dropdown-toggle nav-link dropdown-user-link" href="#" data-toggle="dropdown">
@@ -211,8 +241,9 @@
                                             </span>
                                         </a>
                                         <div class="dropdown-menu dropdown-menu-right">
-                                            <a class="dropdown-item" href="#">
-                                                <i class="feather icon-user"></i> Edit Profile</a>
+                                                <a class="dropdown-item" href="{{ url('public/perfil',Auth::user()->id) }}">
+                                                <i class="feather icon-user"></i> Editar Perfil</a>
+                                                
                                                 <a class="dropdown-item" href="#">
                                                 <i class="feather icon-mail"></i> My Inbox</a>
                                                 <a class="dropdown-item" href="#">
