@@ -13,6 +13,8 @@ class UserController extends Controller
 {
     
     //php artisan passport:install
+        //heroku ps:exec
+        //php artisan passport:keys
     /**
      * Display a listing of the resource.
      *
