@@ -61,9 +61,9 @@ Route::group(['middleware' => ['auth']], function() {
 // Route::get('/piano', function () {
 //     return view('piano/piano');
 // });
-Route::get('/piano1', function () {
-    return view('piano/index');
-});
+// Route::get('/piano1', function () {
+//     return view('piano/index');
+// });
 
 
 
