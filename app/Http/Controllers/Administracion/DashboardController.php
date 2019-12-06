@@ -24,4 +24,8 @@ class DashboardController extends Controller
     {
         return view('dasboard/layout/admin');
     }
+    public function publicPiano()
+    {
+        return view('piano/piano');
+    }
 }

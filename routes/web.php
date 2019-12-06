@@ -35,6 +35,7 @@ Route::get('adm/roles', function () {
     return view('administracion/roles/index');
 });
 Route::get('/','Administracion\DashboardController@publicViewDashboard');
+Route::get('/piano','Administracion\DashboardController@publicPiano');
 Auth::routes();
 //Rutas de redireccion de vistas a los distintos usuarios y accesos
 Route::group(['middleware' => ['auth']], function() {
@@ -54,12 +55,12 @@ Route::group(['middleware' => ['auth']], function() {
 });
 
 
-Route::get('/lista', function () {
-    return view('cursos/lista');
-});
-Route::get('/piano', function () {
-    return view('piano/piano');
-});
+// Route::get('/lista', function () {
+//     return view('cursos/lista');
+// });
+// Route::get('/piano', function () {
+//     return view('piano/piano');
+// });
 Route::get('/piano1', function () {
     return view('piano/index');
 });
