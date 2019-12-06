@@ -11,9 +11,9 @@
 |
 */
 
-Route::get('/', function () {
-    return view('cursos/lista');
-});
+// Route::get('/', function () {
+//     return view('cursos/lista');
+// });
 // Route::get('/home', function () {
 //     return view('cursos/lista');
 // });
@@ -34,9 +34,11 @@ Route::get('/', function () {
 Route::get('adm/roles', function () {
     return view('administracion/roles/index');
 });
+Route::get('/','Administracion\DashboardController@publicViewDashboard');
 Auth::routes();
 //Rutas de redireccion de vistas a los distintos usuarios y accesos
 Route::group(['middleware' => ['auth']], function() {
+    
     Route::get('sismusic','Administracion\DashboardController@publicViewDashboard');
     Route::get('adm','Administracion\DashboardController@adminViewDashboard');
     Route::resource('adm/roles','Administracion\RoleController');
