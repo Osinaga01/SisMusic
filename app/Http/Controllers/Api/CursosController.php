@@ -5,6 +5,7 @@ namespace App\Http\Controllers\Api;
 use App\Curso;
 use Illuminate\Http\Request;
 use App\Http\Controllers\Controller;
+use DB;
 
 class CursosController extends Controller
 {
@@ -15,12 +16,28 @@ class CursosController extends Controller
      *
      * @return \Illuminate\Http\Response
      */
-    public function index()
+    public function listaCursos()
     {
-        $curso = Curso::all();
+        $curso = DB::table('cursos')
+                    ->join('docentes','docentes.user_id','=','cursos.id_docente')
+                    ->join('perfils','perfils.user_id','=','docentes.user_id')
+                    ->join('users','users.id','=','perfils.user_id')
+                    ->select('users.id','users.name','perfils.apellidos','cursos.nombre','cursos.descripcion','cursos.fecha_inicio')
+                    ->get();
         //return response()->json("Datos",$curso);
-        return response()->json(['Cursos' => $curso],200);
+        return response()->json(['cursos' => $curso],200);
     }
+    public function selectTemarioCurso(Request $req)
+    {
+        $curso = DB::table('temarios')
+                    ->join('cursos','cursos.id','=','temarios.curso_id')
+                    ->select('temarios.*')
+                    ->where('temarios.curso_id','=',$request->input('id'))
+                    ->get();
+        //return response()->json("Datos",$curso);
+        return response()->json(['cursos' => $curso],200);
+    }
+
 
     /**
      * Show the form for creating a new resource.

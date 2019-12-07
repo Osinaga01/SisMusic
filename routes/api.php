@@ -17,4 +17,5 @@ Route::middleware('auth:api')->get('/user', function (Request $request) {
     return $request->user();
 });
 
-Route::Resource('lista/cursos', 'Api\CursosController');
+Route::get('lista/cursos', 'Api\CursosController@listaCursos');
+Route::get('lista/temarios/{id}', 'Api\CursosController@selectTemarioCurso');
