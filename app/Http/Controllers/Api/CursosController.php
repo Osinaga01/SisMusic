@@ -25,17 +25,27 @@ class CursosController extends Controller
                     ->select('cursos.id','users.name as nombre_docente','perfils.apellidos as apellido_docente','cursos.nombre as nombre_curso','cursos.descripcion','cursos.fecha_inicio','cursos.fecha_fin')
                     ->get();
         //return response()->json("Datos",$curso);
-        return response()->json(['cursos' => $curso],200);
+        return response()->json(['data' => $curso],200);
     }
     public function selectTemarioCurso(Request $req)
     {
-        $curso = DB::table('temarios')
+        $temario = DB::table('temarios')
                     ->join('cursos','cursos.id','=','temarios.curso_id')
                     ->select('temarios.*')
-                    ->where('temarios.curso_id','=',$request->input('id'))
+                    ->where('temarios.curso_id','=',$req->input('id'))
                     ->get();
         //return response()->json("Datos",$curso);
-        return response()->json(['cursos' => $curso],200);
+        return response()->json(['data' => $temario],200);
+    }
+    public function selectTemaTemario(Request $req)
+    {
+        $temario = DB::table('temarios')
+                    ->join('cursos','cursos.id','=','temarios.curso_id')
+                    ->select('temarios.*')
+                    ->where('temarios.curso_id','=',$req->input('id'))
+                    ->get();
+        //return response()->json("Datos",$curso);
+        return response()->json(['data' => $temario],200);
     }
 
 
