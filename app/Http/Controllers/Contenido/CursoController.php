@@ -1,11 +1,13 @@
 <?php
 
-namespace App\Http\Controllers;
+namespace App\Http\Controllers\Contenido;
 
-use App\Inscripcion;
 use Illuminate\Http\Request;
+use App\Http\Controllers\Controller;
+use App\Curso;
+use DB;
 
-class InscripcionController extends Controller
+class CursoController extends Controller
 {
     /**
      * Display a listing of the resource.
@@ -14,7 +16,8 @@ class InscripcionController extends Controller
      */
     public function index()
     {
-        //
+        $curso = DB::table('cursos')->get();
+        return view('adm-contenido/cursos/index',compact('curso'));
     }
 
     /**
@@ -24,7 +27,7 @@ class InscripcionController extends Controller
      */
     public function create()
     {
-        //
+        return view('adm-contenido/cursos/create');
     }
 
     /**
@@ -35,16 +38,16 @@ class InscripcionController extends Controller
      */
     public function store(Request $request)
     {
-        //
+        
     }
 
     /**
      * Display the specified resource.
      *
-     * @param  \App\Inscripcion  $inscripcion
+     * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function show(Inscripcion $inscripcion)
+    public function show($id)
     {
         //
     }
@@ -52,10 +55,10 @@ class InscripcionController extends Controller
     /**
      * Show the form for editing the specified resource.
      *
-     * @param  \App\Inscripcion  $inscripcion
+     * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function edit(Inscripcion $inscripcion)
+    public function edit($id)
     {
         //
     }
@@ -64,10 +67,10 @@ class InscripcionController extends Controller
      * Update the specified resource in storage.
      *
      * @param  \Illuminate\Http\Request  $request
-     * @param  \App\Inscripcion  $inscripcion
+     * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function update(Request $request, Inscripcion $inscripcion)
+    public function update(Request $request, $id)
     {
         //
     }
@@ -75,10 +78,10 @@ class InscripcionController extends Controller
     /**
      * Remove the specified resource from storage.
      *
-     * @param  \App\Inscripcion  $inscripcion
+     * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function destroy(Inscripcion $inscripcion)
+    public function destroy($id)
     {
         //
     }

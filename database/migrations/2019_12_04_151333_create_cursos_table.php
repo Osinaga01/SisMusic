@@ -18,8 +18,9 @@ class CreateCursosTable extends Migration
             $table->string('nombre');
             $table->string('descripcion');
             $table->date('fecha_inicio');
-            $table->date('fecha_fin');
+            $table->date('fecha_fin')->nullable();;
             $table->integer('nro_cupos');
+            $table->string('imagen')->nullable();
             $table->String('estado');
             $table->unsignedBigInteger('id_docente');
             $table->foreign('id_docente')->references('user_id')->on('docentes');

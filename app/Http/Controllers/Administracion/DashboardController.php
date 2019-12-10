@@ -18,7 +18,7 @@ class DashboardController extends Controller
     }
     public function publicViewDashboard()
     {
-        return view('cursos/lista');
+        return view('public/cursos/lista');
     }
     public function adminViewDashboard()
     {
