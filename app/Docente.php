@@ -8,7 +8,7 @@ class Docente extends Model
 {
 
     protected $table = 'docentes';
-    protected $primaryKey= 'id_user';
+    protected $primaryKey= 'user_id';
     protected $fillable = [
     'codigo_profesor',
     'profecion',

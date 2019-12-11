@@ -7,12 +7,13 @@ use Illuminate\Database\Eloquent\Model;
 class Perfil extends Model
 {
     protected $table = 'perfils';
-    protected $primaryKey= 'id';
+    protected $primaryKey= 'user_id';
     protected $fillable = [
     'apellidos',
     'sexo',
     'foto',
     'telefono',
+    'tipo',
     'estado'
     ];
 
