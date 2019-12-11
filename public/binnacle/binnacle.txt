@@ -1,0 +1,4 @@
+
+Fecha: 11-12-2019 04:49:08 || ID: 1 || Nombre: Admin admin@gmail.com || IP: 127.0.0.1 || Url: http://localhost:8000/adm/cursos
+Fecha: 11-12-2019 11:34:46 || ID: 1 || Nombre: Admin admin@gmail.com || IP: 127.0.0.1 || Url: http://localhost:8000/adm/cursos
+Fecha: 11-12-2019 11:46:36 || ID: 1 || Nombre: Admin admin@gmail.com || IP: 127.0.0.1 || Url: http://localhost:8000/adm/cursos

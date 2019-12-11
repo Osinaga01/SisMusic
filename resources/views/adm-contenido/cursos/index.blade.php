@@ -41,7 +41,7 @@
                                         <td>
                                             {{-- @can('role-edit') --}}
                                                 {{-- <a class="btn btn-icon btn-sm btn-icon rounded-circle btn-flat-success mr-1 mb-1 waves-effect waves-light" data-toggle="tooltip" data-placement="right" data-original-title="Editar Rol" href="{{ route('roles.edit',$role->id) }}"><i class="feather icon-edit"></i></a> --}}
-                                                <a class="btn btn-icon btn-sm btn-icon rounded-circle btn-flat-success mr-1 mb-1 waves-effect waves-light" data-toggle="tooltip" data-placement="right" data-original-title="Curso Rol" href=""><i class="feather icon-edit"></i></a>
+                                                <a class="btn btn-icon btn-sm btn-icon rounded-circle btn-flat-success mr-1 mb-1 waves-effect waves-light" data-toggle="tooltip" data-placement="right" data-original-title="Editar Curso" href="{{ route('cursos.edit',$item->id) }}"><i class="feather icon-edit"></i></a>
                                             {{-- @endcan --}}
                                                 {{-- {!! Form::open(['method' => 'DELETE','route' => ['roles.destroy', $role->id],'style'=>'display:inline','data-toggle'=>'tooltip','data-placement'=>'right','data-original-title'=>'Eliminar Rol']) !!}
                                                     {!! Form::button('<i class="feather icon-trash-2"></i>', ['class' => 'btn btn-icon btn-sm btn-icon rounded-circle btn-flat-danger mr-1 mb-1 waves-effect waves-light']) !!}

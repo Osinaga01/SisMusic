@@ -35,10 +35,10 @@
               <div class="profile-header mb-2">
                   <div class="relative">
                       <div class="cover-container">
-                          <img class="img-fluid bg-cover rounded-0 w-100" src="app-assets/images/profile/user-uploads/cover.jpg" alt="User Profile Image">
+                          <img class="img-fluid bg-cover rounded-0 w-100" src="{{ asset('app-assets/images/profile/user-uploads/cover.jpg') }}" alt="User Profile Image">
                       </div>
                       <div class="profile-img-container d-flex align-items-center justify-content-between">
-                          <img src="app-assets/images/profile/user-uploads/user-13.jpg" class="rounded-circle img-border box-shadow-1" alt="Card image">
+                          <img src="{{ asset('app-assets/images/profile/user-uploads/user-13.jpg') }}" class="rounded-circle img-border box-shadow-1" alt="Card image">
                           <div class="float-right">
                               <button type="button" class="btn btn-icon btn-icon rounded-circle btn-primary mr-1">
                                   <i class="feather icon-edit-2"></i>
