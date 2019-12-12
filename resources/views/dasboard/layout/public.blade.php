@@ -217,7 +217,7 @@
                             <li class="dropdown dropdown-language nav-item">
                                     <a class="dropdown-toggle nav-link" id="dropdown-flag" href="#" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                                             <i class="ficon feather icon-target"></i>
-                                      <span class="selected-language">SisMucic |</span></a>
+                                      <span class="selected-language">SisMusic |</span></a>
                                       
                             </li>
                                 
