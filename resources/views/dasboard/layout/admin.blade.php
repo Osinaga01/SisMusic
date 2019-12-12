@@ -61,7 +61,7 @@
         <div class="shadow-bottom"></div>
         <div class="main-menu-content">
           <ul class="navigation navigation-main" id="main-menu-navigation" data-menu="menu-navigation">
-            <li class=" nav-item active"><a href="#"><i class="feather icon-home"></i><span class="menu-title" data-i18n="Dashboard">Inicio</span></a>
+            <li class=" nav-item active"><a href="{{ url('adm') }}"><i class="feather icon-home"></i><span class="menu-title" data-i18n="Dashboard">Inicio</span></a>
                
             </li>
             <li class=" navigation-header"><span>Seccion</span>
@@ -70,7 +70,7 @@
             </li>
             <li class=" nav-item"><a href="{{ url('adm/cursos') }}"><i class="feather icon-paperclip"></i><span class="menu-title" data-i18n="Email">Cursos</span></a>
             </li>
-            <li class=" nav-item"><a href="{{ url('adm/temarios') }}"><i class="feather icon-paperclip"></i><span class="menu-title" data-i18n="Email">Temarios</span></a>
+            <li class=" nav-item"><a href="{{ url('adm/temarios') }}"><i class="feather icon-file"></i><span class="menu-title" data-i18n="Email">Temarios</span></a>
             </li>
             <li class=" nav-item"><a href="#"><i class="feather icon-file-text"></i><span class="menu-title" data-i18n="Chat">Examenes</span></a>
             </li>
@@ -124,7 +124,7 @@
                                 <!--     i.ficon.feather.icon-menu-->
                                 {{-- <li class="nav-item d-none d-lg-block"><a class="nav-link" href="sk-layout-1-column.html" data-toggle="tooltip" data-placement="top" title="1-Column"><i class="ficon feather icon-file-text"></i></a></li>
                                 <li class="nav-item d-none d-lg-block"><a class="nav-link" href="sk-layout-2-columns.html" data-toggle="tooltip" data-placement="top" title="2-Columns"><i class="ficon feather icon-sidebar"></i></a></li> --}}
-                                <li class="nav-item d-none d-lg-block"><a class="nav-link" href="{{ url('sismusic') }}" data-toggle="tooltip" data-placement="top" title="Static Layout"><i class="fa fa-home"></i></a></li>
+                                <li class="nav-item d-none d-lg-block"><a class="nav-link" href="{{ url('sismusic') }}" data-toggle="tooltip" data-placement="top" title="Ir a Pagina publica"><i class="fa fa-home"></i></a></li>
                             </ul>
                             <ul class="nav navbar-nav">
                                 {{-- <li class="nav-item d-none d-lg-block"><a class="nav-link bookmark-star"><i class="ficon feather icon-star warning"></i></a> --}}

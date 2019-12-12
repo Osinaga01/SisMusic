@@ -109,7 +109,7 @@
                                     <span class="selected-language">Piano |</span>
                                 </a>         
                             </li>
-                            <li class="dropdown dropdown-language nav-item">
+                            {{-- <li class="dropdown dropdown-language nav-item">
                               <a class="dropdown-toggle nav-link" id="dropdown-flag" href="#" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                                 <i class="ficon feather icon-chevron-down"></i>
                                 <span class="selected-language">Opcion |</span></a>
@@ -124,23 +124,8 @@
                                   <i class="flag-icon flag-icon-pt"></i> Portuguese</a>
                                 </div>
                                 
-                            </li>
-                            <li class="dropdown dropdown-language nav-item">
-                                <a class="dropdown-toggle nav-link" id="dropdown-flag" href="#" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                                  <i class="ficon feather icon-chevron-down"></i>
-                                  <span class="selected-language">Opcion |</span></a>
-                                  <div class="dropdown-menu" aria-labelledby="dropdown-flag">
-                                    <a class="dropdown-item" href="#" data-language="en">
-                                    <i class="flag-icon flag-icon-us"></i> English</a>
-                                    <a class="dropdown-item" href="#" data-language="fr">
-                                    <i class="flag-icon flag-icon-fr"></i> French</a>
-                                    <a class="dropdown-item" href="#" data-language="de">
-                                    <i class="flag-icon flag-icon-de"></i> German</a>
-                                    <a class="dropdown-item" href="#" data-language="pt">
-                                    <i class="flag-icon flag-icon-pt"></i> Portuguese</a>
-                                  </div>
-                                  
-                              </li>
+                            </li> --}}
+
                             {{-- <li class="nav-item d-none d-lg-block"><a class="nav-link nav-link-expand"><i class="ficon feather icon-maximize"></i></a></li>
                             <li class="nav-item nav-search"><a class="nav-link nav-link-search"><i class="ficon feather icon-search"></i></a>
                                 <div class="search-input">
@@ -228,7 +213,13 @@
                                 <li class="nav-item">
                                     <a class="nav-link" href="{{ route('register') }}">{{ __('Register') }}</a>
                                 </li> --}}
-                            <li class="nav-item d-none d-lg-block" style="margin-top:50px:"><a class="nav-link" ><i class="ficon feather icon-target"></i></a></li>
+                            {{-- <li class="nav-item d-none d-lg-block" style="margin-top:50px:"><a class="nav-link" ><i class="ficon feather icon-target"></i></a></li> --}}
+                            <li class="dropdown dropdown-language nav-item">
+                                    <a class="dropdown-toggle nav-link" id="dropdown-flag" href="#" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                            <i class="ficon feather icon-target"></i>
+                                      <span class="selected-language">SisMucic |</span></a>
+                                      
+                            </li>
                                 
                         @else
                                     <li class="dropdown dropdown-user nav-item"><a class="dropdown-toggle nav-link dropdown-user-link" href="#" data-toggle="dropdown">

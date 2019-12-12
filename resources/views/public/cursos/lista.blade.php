@@ -16,12 +16,16 @@
                           </div> --}}
                       </div>
                       <div class="view-options">
-                          <select class="price-options form-control" id="ecommerce-price-options">
+                        <div class="view-btn-option">
+                            
+                        </div>
+                          {{-- <select class="price-options form-control" id="ecommerce-price-options">
                               <option selected>Featured</option>
                               <option value="1">Lowest</option>
                               <option value="2">Highest</option>
-                          </select>
+                          </select> --}}
                           <div class="view-btn-option">
+                                
                               <button class="btn btn-white view-btn grid-view-btn active">
                                   <i class="feather icon-grid"></i>
                               </button>
@@ -94,7 +98,7 @@
                             </div>
                             <div class="item-cost">
                                 <h6 class="item-price">
-                                    $39.99
+                                    $09.99
                                 </h6>
                             </div>
                         </div>
@@ -158,7 +162,7 @@
           </span>
           <div class="card">
               <div class="card-body">
-                  <div class="multi-range-price">
+                  {{-- <div class="multi-range-price">
                       <div class="multi-range-title pb-75">
                           <h6 class="filter-title mb-0">Multi Range</h6>
                       </div>
@@ -215,7 +219,7 @@
                           </li>
 
                       </ul>
-                  </div>
+                  </div> --}}
                   <!-- /Price Filter -->
                   {{-- <hr>
                   <!-- /Price Slider -->
@@ -236,7 +240,12 @@
                   <!-- Categories Starts -->
                   <div id="product-categories">
                       <div class="product-category-title">
-                          <h6 class="filter-title mb-1">Categories</h6>
+                            <a href="{{ asset('apk/APP_APOYO_U.apk') }}">
+                                <button type="button"  dowload="APP_APOYO_U.apk" class="btn mr-1 mb-1 btn-primary waves-effect  waves-light">
+                                      <i class="fa fa-android"></i>  Descargate Nuestra Aplicacion movil
+                                </button>
+                            </a>
+                          <h6 class="filter-title mb-1">Categorias</h6>
                       </div>
                       <ul class="list-unstyled categories-list">
                           <li>
@@ -246,7 +255,7 @@
                                       <span class="vs-radio--border"></span>
                                       <span class="vs-radio--circle"></span>
                                   </span>
-                                  <span class="ml-50">Appliances</span>
+                                  <span class="ml-50">Teoricos</span>
                               </span>
                           </li>
                           <li>
@@ -256,7 +265,7 @@
                                       <span class="vs-radio--border"></span>
                                       <span class="vs-radio--circle"></span>
                                   </span>
-                                  <span class="ml-50"> Audio</span>
+                                  <span class="ml-50">Practicos</span>
                               </span>
                           </li>
                           <li>
@@ -266,80 +275,10 @@
                                       <span class="vs-radio--border"></span>
                                       <span class="vs-radio--circle"></span>
                                   </span>
-                                  <span class="ml-50">Cameras & Camcorders</span>
+                                  <span class="ml-50">Piano</span>
                               </span>
                           </li>
-                          <li>
-                              <span class="vs-radio-con vs-radio-primary py-25">
-                                  <input type="radio" name="category-filter" value="false">
-                                  <span class="vs-radio">
-                                      <span class="vs-radio--border"></span>
-                                      <span class="vs-radio--circle"></span>
-                                  </span>
-                                  <span class="ml-50">Car Electronics & GPS</span>
-                              </span>
-                          </li>
-                          <li>
-                              <span class="vs-radio-con vs-radio-primary py-25">
-                                  <input type="radio" name="category-filter" value="false">
-                                  <span class="vs-radio">
-                                      <span class="vs-radio--border"></span>
-                                      <span class="vs-radio--circle"></span>
-                                  </span>
-                                  <span class="ml-50">Cell Phones</span>
-                              </span>
-                          </li>
-                          <li>
-                              <span class="vs-radio-con vs-radio-primary py-25">
-                                  <input type="radio" name="category-filter" value="false">
-                                  <span class="vs-radio">
-                                      <span class="vs-radio--border"></span>
-                                      <span class="vs-radio--circle"></span>
-                                  </span>
-                                  <span class="ml-50">Computers & Tablets</span>
-                              </span>
-                          </li>
-                          <li>
-                              <span class="vs-radio-con vs-radio-primary py-25">
-                                  <input type="radio" name="category-filter" value="false">
-                                  <span class="vs-radio">
-                                      <span class="vs-radio--border"></span>
-                                      <span class="vs-radio--circle"></span>
-                                  </span>
-                                  <span class="ml-50"> Health, Fitness & Beauty</span>
-                              </span>
-                          </li>
-                          <li>
-                              <span class="vs-radio-con vs-radio-primary py-25">
-                                  <input type="radio" name="category-filter" value="false">
-                                  <span class="vs-radio">
-                                      <span class="vs-radio--border"></span>
-                                      <span class="vs-radio--circle"></span>
-                                  </span>
-                                  <span class="ml-50">Office & School Supplies</span>
-                              </span>
-                          </li>
-                          <li>
-                              <span class="vs-radio-con vs-radio-primary py-25">
-                                  <input type="radio" name="category-filter" value="false">
-                                  <span class="vs-radio">
-                                      <span class="vs-radio--border"></span>
-                                      <span class="vs-radio--circle"></span>
-                                  </span>
-                                  <span class="ml-50">TV & Home Theater</span>
-                              </span>
-                          </li>
-                          <li>
-                              <span class="vs-radio-con vs-radio-primary py-25">
-                                  <input type="radio" name="category-filter" value="false">
-                                  <span class="vs-radio">
-                                      <span class="vs-radio--border"></span>
-                                      <span class="vs-radio--circle"></span>
-                                  </span>
-                                  <span class="ml-50">Video Games
-                                  </span>
-                              </span>
-                          </li>
+                          
 
                       </ul>
                   </div>
