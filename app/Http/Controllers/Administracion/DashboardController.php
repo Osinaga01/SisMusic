@@ -17,6 +17,8 @@ class DashboardController extends Controller
          $this->middleware('permission:role-edit', ['only' => ['edit','update']]);
          $this->middleware('permission:role-delete', ['only' => ['destroy']]);
          $this->middleware('permission:ver-admin', ['only' => ['sismusic']]);
+         $this->middleware('permission:ver-cursos-adm', ['only' => ['adm']]);
+         $this->middleware('permission:ver-seguridad', ['only' => ['adm']]);
     }
     public function publicViewDashboard()
     {

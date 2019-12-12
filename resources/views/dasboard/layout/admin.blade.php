@@ -66,8 +66,10 @@
             </li>
             <li class=" navigation-header"><span>Seccion</span>
             </li>
+            @can('ver-cursos-adm')
             <li class=" nav-item"><a href="{{ url('adm/cursos') }}"><i class="feather icon-paperclip"></i><span class="menu-title" data-i18n="Email">Cursos-adm</span></a>
             </li>
+            @endcan
             <li class=" nav-item"><a href="{{ url('adm/cursos') }}"><i class="feather icon-paperclip"></i><span class="menu-title" data-i18n="Email">Cursos</span></a>
             </li>
             <li class=" nav-item"><a href="{{ url('adm/temarios') }}"><i class="feather icon-file"></i><span class="menu-title" data-i18n="Email">Temarios</span></a>
@@ -78,6 +80,7 @@
             </li>
             {{-- <li class=" nav-item"><a href="#"><i class="feather icon-calendar"></i><span class="menu-title" data-i18n="Calender">Opcion</span></a>
             </li> --}}
+            @can('ver-seguridad')
             <li class=" nav-item"><a href="#"><i class="fa fa-lock"></i><span class="menu-title" data-i18n="Ecommerce">Seguridad</span></a>
                 <ul class="menu-content">
                     <li><a href="{{ url('/adm/users') }}"><i class="fa fa-key"></i><span class="menu-item" data-i18n="Shop">Usuarios</span></a>
@@ -87,6 +90,7 @@
                    
                 </ul>
             </li>
+            @endcan
             {{-- <li class=" navigation-header"><span>Seccion</span>
             </li>
             <li class=" nav-item"><a href="#"><i class="feather icon-list"></i><span class="menu-title" data-i18n="Data List">Opcion</span><span class="badge badge badge-primary badge-pill float-right mr-2">Nuevo</span></a>
