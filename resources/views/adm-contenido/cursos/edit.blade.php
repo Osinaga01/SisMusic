@@ -8,6 +8,7 @@
           <div class="card">
               <div class="card-header">
                   <h4 class="card-title">Edicion de Cursos</h4>
+                  <a  href="{{ route('cursos.index') }}" class="btn btn-warning card-title mr-1 mb-1 waves-effect waves-light"><i class="feather icon-arrow-left"></i>  Regresar</a>
               </div>
               <div class="card-content">
                   <div class="card-body">

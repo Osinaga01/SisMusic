@@ -76,8 +76,8 @@
             </li>
             <li class=" nav-item"><a href="{{ url('/adm/estudiante') }}"><i class="feather icon-users"></i><span class="menu-title" data-i18n="Todo">Estudiantes</span></a>
             </li>
-            <li class=" nav-item"><a href="#"><i class="feather icon-calendar"></i><span class="menu-title" data-i18n="Calender">Opcion</span></a>
-            </li>
+            {{-- <li class=" nav-item"><a href="#"><i class="feather icon-calendar"></i><span class="menu-title" data-i18n="Calender">Opcion</span></a>
+            </li> --}}
             <li class=" nav-item"><a href="#"><i class="fa fa-lock"></i><span class="menu-title" data-i18n="Ecommerce">Seguridad</span></a>
                 <ul class="menu-content">
                     <li><a href="{{ url('/adm/users') }}"><i class="fa fa-key"></i><span class="menu-item" data-i18n="Shop">Usuarios</span></a>

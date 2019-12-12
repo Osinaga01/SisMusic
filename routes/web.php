@@ -50,6 +50,18 @@ Route::group(['middleware' => ['auth']], function() {
     Route::resource('adm/temarios','Contenido\TemarioController');
     Route::get('adm/tema/{id}','Contenido\TemarioController@create');
 
+
+
+
+
+    
+
+
+
+
+
+    Route::resource('adm/cursosprofesor','Contenido\CursoController');
+
     //Rutas Publicas
     Route::resource('public/perfil/{id}','Administracion\PerfilController');
     
