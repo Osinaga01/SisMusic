@@ -29,6 +29,9 @@ class DashboardController extends Controller
     public function detalleCurso($id)
     {
         //dd($id)
+        //AGREGANDO LA ACCION A BITACORA
+        Auth()->user()->registerBinnacle();
+
         $curso = DB::table('cursos')
         ->select('cursos.*')
         ->where('estado','=','1')
@@ -80,10 +83,14 @@ class DashboardController extends Controller
 
     public function adminViewDashboard()
     {
+        //AGREGANDO LA ACCION A BITACORA
+        Auth()->user()->registerBinnacle();
         return view('dasboard/layout/admin');
     }
     public function publicPiano()
     {
+        //AGREGANDO LA ACCION A BITACORA
+        Auth()->user()->registerBinnacle();
         return view('piano/piano');
     }
 }

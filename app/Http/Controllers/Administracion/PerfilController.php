@@ -18,6 +18,8 @@ class PerfilController extends Controller
      */
     public function index($id)
     {
+        //AGREGANDO LA ACCION A BITACORA
+        Auth()->user()->registerBinnacle();
         $estudiante = User::find($id);
         $ap = $estudiante->perfil->apellidos;
         $curso = DB::select("SELECT cursos.*

@@ -32,6 +32,9 @@ class RoleController extends Controller
      */
     public function index(Request $request)
     {
+        //AGREGANDO LA ACCION A BITACORA
+        Auth()->user()->registerBinnacle();
+
         $roles = Role::orderBy('id','DESC')->paginate(5);
         return view('administracion.roles.index',compact('roles'))
             ->with('i', ($request->input('page', 1) - 1) * 5);
@@ -45,6 +48,9 @@ class RoleController extends Controller
      */
     public function create()
     {
+        //AGREGANDO LA ACCION A BITACORA
+        Auth()->user()->registerBinnacle();
+
         $permission = Permission::get();
         return view('administracion.roles.create',compact('permission'));
     }
@@ -90,6 +96,8 @@ class RoleController extends Controller
      */
     public function edit($id)
     {
+        //AGREGANDO LA ACCION A BITACORA
+        Auth()->user()->registerBinnacle();
         $role = Role::find($id);
         $permission = Permission::get();
         $rolePermissions = DB::table("role_has_permissions")->where("role_has_permissions.role_id",$id)
@@ -110,6 +118,9 @@ class RoleController extends Controller
      */
     public function update(Request $request, $id)
     {
+        //AGREGANDO LA ACCION A BITACORA
+        Auth()->user()->registerBinnacle();
+
         $this->validate($request, [
             'name' => 'required',
             'permission' => 'required',
@@ -135,6 +146,9 @@ class RoleController extends Controller
      */
     public function destroy($id)
     {
+        //AGREGANDO LA ACCION A BITACORA
+        Auth()->user()->registerBinnacle();
+        
         DB::table("roles")->where('id',$id)->delete();
         return redirect()->route('roles.index')
                         ->with('success','Role deleted successfully');

@@ -17,6 +17,8 @@ class DocenteController extends Controller
      */
     public function index()
     {
+        //AGREGANDO LA ACCION A BITACORA
+        Auth()->user()->registerBinnacle();
         $data = DB::select('SELECT users.name, perfils.apellidos, users.email
                              FROM users, perfils, docentes
                                 WHERE users.id = perfils.user_id and perfils.user_id = docentes.user_id');
