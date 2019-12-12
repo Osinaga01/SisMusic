@@ -77,3 +77,4 @@ Fecha: 12-12-2019 13:49:31 || ID: 2 || Nombre: Marcelo Osinaga osinaga255@gmail.
 Fecha: 12-12-2019 15:18:09 || ID: 1 || Nombre: Admin admin@gmail.com || IP: 127.0.0.1 || Url: http://localhost:8000/adm/cursos
 Fecha: 12-12-2019 15:18:17 || ID: 1 || Nombre: Admin admin@gmail.com || IP: 127.0.0.1 || Url: http://localhost:8000/adm/cursos
 Fecha: 12-12-2019 15:18:28 || ID: 1 || Nombre: Admin admin@gmail.com || IP: 127.0.0.1 || Url: http://localhost:8000/adm/temarios
+Fecha: 12-12-2019 17:11:24 || ID: 1 || Nombre: Admin admin@gmail.com || IP: 127.0.0.1 || Url: http://localhost:8000/adm
