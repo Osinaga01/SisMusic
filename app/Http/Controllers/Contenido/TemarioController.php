@@ -4,6 +4,7 @@ namespace App\Http\Controllers\Contenido;
 
 use Illuminate\Http\Request;
 use App\Http\Controllers\Controller;
+use DB;
 
 class TemarioController extends Controller
 {
@@ -15,6 +16,14 @@ class TemarioController extends Controller
     public function index()
     {
         //
+        Auth()->user()->registerBinnacle();
+
+        $temario = DB::table('temarios')
+                   ->join('cursos','cursos.id','=','temarios.curso_id')
+                   ->select('cursos.nombre as nombre_curso','temarios.*')
+                    ->get();
+        
+        return view('adm-contenido/temario/index',compact('temario'));
     }
 
     /**

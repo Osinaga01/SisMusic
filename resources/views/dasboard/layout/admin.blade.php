@@ -66,7 +66,11 @@
             </li>
             <li class=" navigation-header"><span>Seccion</span>
             </li>
+            <li class=" nav-item"><a href="{{ url('adm/cursos') }}"><i class="feather icon-paperclip"></i><span class="menu-title" data-i18n="Email">Cursos-adm</span></a>
+            </li>
             <li class=" nav-item"><a href="{{ url('adm/cursos') }}"><i class="feather icon-paperclip"></i><span class="menu-title" data-i18n="Email">Cursos</span></a>
+            </li>
+            <li class=" nav-item"><a href="{{ url('adm/temarios') }}"><i class="feather icon-paperclip"></i><span class="menu-title" data-i18n="Email">Temarios</span></a>
             </li>
             <li class=" nav-item"><a href="#"><i class="feather icon-file-text"></i><span class="menu-title" data-i18n="Chat">Examenes</span></a>
             </li>
@@ -83,7 +87,7 @@
                    
                 </ul>
             </li>
-            <li class=" navigation-header"><span>Seccion</span>
+            {{-- <li class=" navigation-header"><span>Seccion</span>
             </li>
             <li class=" nav-item"><a href="#"><i class="feather icon-list"></i><span class="menu-title" data-i18n="Data List">Opcion</span><span class="badge badge badge-primary badge-pill float-right mr-2">Nuevo</span></a>
                 <ul class="menu-content">
@@ -92,7 +96,7 @@
                     <li><a href="#"><i class="feather icon-circle"></i><span class="menu-item" data-i18n="Thumb View">Opcion</span></a>
                     </li>
                 </ul>
-            </li>
+            </li> --}}
             
 
         </ul>

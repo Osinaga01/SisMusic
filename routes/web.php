@@ -47,6 +47,7 @@ Route::group(['middleware' => ['auth']], function() {
     Route::resource('adm/users','Administracion\UserController');
     Route::resource('adm/docentes','Administracion\DocenteController');
     Route::resource('adm/cursos','Contenido\CursoController');
+    Route::resource('adm/temarios','Contenido\TemarioController');
 
     //Rutas Publicas
     Route::resource('public/perfil/{id}','Administracion\PerfilController');
