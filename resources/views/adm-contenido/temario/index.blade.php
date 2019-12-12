@@ -8,7 +8,7 @@
                 <div class="card-header">
                     <h4 class="card-title">Lista de Temarios</h4>
                     
-                    <a href="{{ route('temarios.create') }}" class="btn btn-primary card-title mr-1 mb-1 waves-effect waves-light"><i class="feather icon-plus-square"></i>  Nuevo</a>
+                    <a href="{{ url('adm/tema',Auth::user()->id) }}" class="btn btn-primary card-title mr-1 mb-1 waves-effect waves-light"><i class="feather icon-plus-square"></i>  Nuevo</a>
                 </div>
                 <div class="card-content">
                     <div class="card-body">

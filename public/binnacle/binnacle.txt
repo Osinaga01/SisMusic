@@ -38,3 +38,39 @@ Fecha: 12-12-2019 03:53:45 || ID: 1 || Nombre: Admin admin@gmail.com || IP: 127.
 Fecha: 12-12-2019 03:54:13 || ID: 1 || Nombre: Admin admin@gmail.com || IP: 127.0.0.1 || Url: http://localhost:8000/adm/temarios
 Fecha: 12-12-2019 03:54:55 || ID: 1 || Nombre: Admin admin@gmail.com || IP: 127.0.0.1 || Url: http://localhost:8000/adm/temarios
 Fecha: 12-12-2019 03:55:35 || ID: 1 || Nombre: Admin admin@gmail.com || IP: 127.0.0.1 || Url: http://localhost:8000/adm/temarios
+Fecha: 12-12-2019 03:57:58 || ID: 1 || Nombre: Admin admin@gmail.com || IP: 127.0.0.1 || Url: http://localhost:8000/adm/temarios
+Fecha: 12-12-2019 04:18:21 || ID: 1 || Nombre: Admin admin@gmail.com || IP: 127.0.0.1 || Url: http://localhost:8000/adm/temarios
+Fecha: 12-12-2019 04:19:01 || ID: 1 || Nombre: Admin admin@gmail.com || IP: 127.0.0.1 || Url: http://localhost:8000/adm/temarios
+Fecha: 12-12-2019 04:22:15 || ID: 1 || Nombre: Admin admin@gmail.com || IP: 127.0.0.1 || Url: http://localhost:8000/adm/temarios
+Fecha: 12-12-2019 04:35:02 || ID: 1 || Nombre: Admin admin@gmail.com || IP: 127.0.0.1 || Url: http://localhost:8000/adm/cursos
+Fecha: 12-12-2019 04:35:09 || ID: 1 || Nombre: Admin admin@gmail.com || IP: 127.0.0.1 || Url: http://localhost:8000/adm/cursos
+Fecha: 12-12-2019 04:35:12 || ID: 1 || Nombre: Admin admin@gmail.com || IP: 127.0.0.1 || Url: http://localhost:8000/adm/cursos
+Fecha: 12-12-2019 04:38:35 || ID: 1 || Nombre: Admin admin@gmail.com || IP: 127.0.0.1 || Url: http://localhost:8000/adm/temarios
+Fecha: 12-12-2019 04:39:26 || ID: 1 || Nombre: Admin admin@gmail.com || IP: 127.0.0.1 || Url: http://localhost:8000/adm/temarios
+Fecha: 12-12-2019 04:40:12 || ID: 1 || Nombre: Admin admin@gmail.com || IP: 127.0.0.1 || Url: http://localhost:8000/adm/temarios
+Fecha: 12-12-2019 04:49:37 || ID: 2 || Nombre: Marcelo Osinaga osinaga255@gmail.com || IP: 127.0.0.1 || Url: http://localhost:8000/adm/cursos
+Fecha: 12-12-2019 04:49:45 || ID: 2 || Nombre: Marcelo Osinaga osinaga255@gmail.com || IP: 127.0.0.1 || Url: http://localhost:8000/adm/temarios
+Fecha: 12-12-2019 05:10:56 || ID: 2 || Nombre: Marcelo Osinaga osinaga255@gmail.com || IP: 127.0.0.1 || Url: http://localhost:8000/adm/temarios
+Fecha: 12-12-2019 05:11:16 || ID: 2 || Nombre: Marcelo Osinaga osinaga255@gmail.com || IP: 127.0.0.1 || Url: http://localhost:8000/adm/temarios
+Fecha: 12-12-2019 05:19:10 || ID: 2 || Nombre: Marcelo Osinaga osinaga255@gmail.com || IP: 127.0.0.1 || Url: http://localhost:8000/adm/temarios
+Fecha: 12-12-2019 05:20:58 || ID: 2 || Nombre: Marcelo Osinaga osinaga255@gmail.com || IP: 127.0.0.1 || Url: http://localhost:8000/adm/temarios
+Fecha: 12-12-2019 13:15:33 || ID: 1 || Nombre: Admin admin@gmail.com || IP: 127.0.0.1 || Url: http://localhost:8000/adm/cursos
+Fecha: 12-12-2019 13:16:04 || ID: 1 || Nombre: Admin admin@gmail.com || IP: 127.0.0.1 || Url: http://localhost:8000/adm/cursos
+Fecha: 12-12-2019 13:16:14 || ID: 1 || Nombre: Admin admin@gmail.com || IP: 127.0.0.1 || Url: http://localhost:8000/adm/cursos
+Fecha: 12-12-2019 13:16:45 || ID: 1 || Nombre: Admin admin@gmail.com || IP: 127.0.0.1 || Url: http://localhost:8000/adm/temarios
+Fecha: 12-12-2019 13:17:12 || ID: 1 || Nombre: Admin admin@gmail.com || IP: 127.0.0.1 || Url: http://localhost:8000/adm/temarios
+Fecha: 12-12-2019 13:18:07 || ID: 1 || Nombre: Admin admin@gmail.com || IP: 127.0.0.1 || Url: http://localhost:8000/adm/temarios
+Fecha: 12-12-2019 13:18:54 || ID: 1 || Nombre: Admin admin@gmail.com || IP: 127.0.0.1 || Url: http://localhost:8000/adm/cursos
+Fecha: 12-12-2019 13:19:00 || ID: 1 || Nombre: Admin admin@gmail.com || IP: 127.0.0.1 || Url: http://localhost:8000/adm/cursos
+Fecha: 12-12-2019 13:19:03 || ID: 1 || Nombre: Admin admin@gmail.com || IP: 127.0.0.1 || Url: http://localhost:8000/adm/cursos
+Fecha: 12-12-2019 13:19:40 || ID: 1 || Nombre: Admin admin@gmail.com || IP: 127.0.0.1 || Url: http://localhost:8000/adm/cursos
+Fecha: 12-12-2019 13:19:45 || ID: 1 || Nombre: Admin admin@gmail.com || IP: 127.0.0.1 || Url: http://localhost:8000/adm/temarios
+Fecha: 12-12-2019 13:20:02 || ID: 1 || Nombre: Admin admin@gmail.com || IP: 127.0.0.1 || Url: http://localhost:8000/adm/cursos
+Fecha: 12-12-2019 13:21:16 || ID: 1 || Nombre: Admin admin@gmail.com || IP: 127.0.0.1 || Url: http://localhost:8000/adm/cursos
+Fecha: 12-12-2019 13:21:21 || ID: 1 || Nombre: Admin admin@gmail.com || IP: 127.0.0.1 || Url: http://localhost:8000/adm/temarios
+Fecha: 12-12-2019 13:25:59 || ID: 1 || Nombre: Admin admin@gmail.com || IP: 127.0.0.1 || Url: http://localhost:8000/adm/temarios
+Fecha: 12-12-2019 13:39:35 || ID: 2 || Nombre: Marcelo Osinaga osinaga255@gmail.com || IP: 127.0.0.1 || Url: http://localhost:8000/adm/temarios
+Fecha: 12-12-2019 13:39:53 || ID: 2 || Nombre: Marcelo Osinaga osinaga255@gmail.com || IP: 127.0.0.1 || Url: http://localhost:8000/adm/temarios
+Fecha: 12-12-2019 13:40:15 || ID: 2 || Nombre: Marcelo Osinaga osinaga255@gmail.com || IP: 127.0.0.1 || Url: http://localhost:8000/adm/temarios
+Fecha: 12-12-2019 13:45:13 || ID: 2 || Nombre: Marcelo Osinaga osinaga255@gmail.com || IP: 127.0.0.1 || Url: http://localhost:8000/adm/temarios
+Fecha: 12-12-2019 13:49:31 || ID: 2 || Nombre: Marcelo Osinaga osinaga255@gmail.com || IP: 127.0.0.1 || Url: http://localhost:8000/adm/temarios

@@ -51,7 +51,7 @@
     <div class="main-menu menu-fixed menu-light menu-accordion menu-shadow" data-scroll-to-active="true">
         <div class="navbar-header">
             <ul class="nav navbar-nav flex-row">
-                <li class="nav-item mr-auto"><a class="navbar-brand" href="../../../html/ltr/vertical-menu-template/index.html">
+                <li class="nav-item mr-auto"><a class="navbar-brand" href="{{ url('fa-home') }}">
                         <div class="brand-logo"></div>
                         <h2 class="brand-text mb-0">SisMusic</h2>
                     </a></li>
@@ -122,12 +122,12 @@
                                 <!-- li.nav-item.mobile-menu.d-xl-none.mr-auto-->
                                 <!--   a.nav-link.nav-menu-main.menu-toggle.hidden-xs(href='#')-->
                                 <!--     i.ficon.feather.icon-menu-->
-                                <li class="nav-item d-none d-lg-block"><a class="nav-link" href="sk-layout-1-column.html" data-toggle="tooltip" data-placement="top" title="1-Column"><i class="ficon feather icon-file-text"></i></a></li>
-                                <li class="nav-item d-none d-lg-block"><a class="nav-link" href="sk-layout-2-columns.html" data-toggle="tooltip" data-placement="top" title="2-Columns"><i class="ficon feather icon-sidebar"></i></a></li>
-                                <li class="nav-item d-none d-lg-block"><a class="nav-link" href="sk-layout-static.html" data-toggle="tooltip" data-placement="top" title="Static Layout"><i class="ficon feather icon-sliders"></i></a></li>
+                                {{-- <li class="nav-item d-none d-lg-block"><a class="nav-link" href="sk-layout-1-column.html" data-toggle="tooltip" data-placement="top" title="1-Column"><i class="ficon feather icon-file-text"></i></a></li>
+                                <li class="nav-item d-none d-lg-block"><a class="nav-link" href="sk-layout-2-columns.html" data-toggle="tooltip" data-placement="top" title="2-Columns"><i class="ficon feather icon-sidebar"></i></a></li> --}}
+                                <li class="nav-item d-none d-lg-block"><a class="nav-link" href="{{ url('sismusic') }}" data-toggle="tooltip" data-placement="top" title="Static Layout"><i class="fa fa-home"></i></a></li>
                             </ul>
                             <ul class="nav navbar-nav">
-                                <li class="nav-item d-none d-lg-block"><a class="nav-link bookmark-star"><i class="ficon feather icon-star warning"></i></a>
+                                {{-- <li class="nav-item d-none d-lg-block"><a class="nav-link bookmark-star"><i class="ficon feather icon-star warning"></i></a> --}}
                                     <div class="bookmark-input search-input">
                                         <div class="bookmark-input-icon"><i class="feather icon-search primary"></i></div>
                                         <input class="form-control input" type="text" placeholder="Explore Vuesax..." tabindex="0" data-search="starter-list" />
@@ -216,7 +216,16 @@
                                     <div class="user-nav d-sm-flex d-none"><span class="user-name text-bold-600">{{ Auth::user()->name }}</span><span class="user-status">{{ Auth::user()->email }}</span></div><span><img class="round" src="../../../app-assets/images/portrait/small/avatar-s-11.png" alt="avatar" height="40" width="40" /></span>
                                 </a>
                                 <div class="dropdown-menu dropdown-menu-right"><a class="dropdown-item" href="#"><i class="feather icon-user"></i> Edit Profile</a><a class="dropdown-item" href="#"><i class="feather icon-mail"></i> My Inbox</a><a class="dropdown-item" href="#"><i class="feather icon-check-square"></i> Task</a><a class="dropdown-item" href="#"><i class="feather icon-message-square"></i> Chats</a>
-                                    <div class="dropdown-divider"></div><a class="dropdown-item" href="#"><i class="feather icon-power"></i> Logout</a>
+                                    <div class="dropdown-divider"></div>
+                                        <a class="dropdown-item" href="{{ route('logout') }}"
+                                        onclick="event.preventDefault();
+                                                        document.getElementById('logout-form').submit();">
+                                            
+                                            <i class="feather icon-power"></i> Logout</a>
+
+                                        <form id="logout-form" action="{{ route('logout') }}" method="POST" style="display: none;">
+                                            @csrf
+                                        </form>
                                 </div>
                             </li>
                         </ul>

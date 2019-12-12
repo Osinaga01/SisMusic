@@ -72,13 +72,13 @@
                                 <!-- li.nav-item.mobile-menu.d-xl-none.mr-auto-->
                                 <!--   a.nav-link.nav-menu-main.menu-toggle.hidden-xs(href='#')-->
                                 <!--     i.ficon.feather.icon-menu-->
-                                <li class="nav-item d-none d-lg-block"><a class="nav-link nav-link-expand"><i class="ficon feather icon-maximize"></i></a></li>
+                                <li class="nav-item d-none d-lg-block"><a href="{{ url('sismusic') }}" class="nav-link"><i class="fa fa-home"></i></a></li>
                                 {{-- <li class="nav-item d-none d-lg-block"><a class="nav-link" href="sk-layout-1-column.html" data-toggle="tooltip" data-placement="top" title="1-Column"><i class="ficon feather icon-file-text"></i></a></li>
                                 <li class="nav-item d-none d-lg-block"><a class="nav-link" href="sk-layout-2-columns.html" data-toggle="tooltip" data-placement="top" title="2-Columns"><i class="ficon feather icon-sidebar"></i></a></li>
                                 <li class="nav-item d-none d-lg-block"><a class="nav-link" href="sk-layout-static.html" data-toggle="tooltip" data-placement="top" title="Static Layout"><i class="ficon feather icon-sliders"></i></a></li> --}}
                             </ul>
                             <ul class="nav navbar-nav">
-                                <li class="nav-item d-none d-lg-block"><a class="nav-link bookmark-star"><i class="ficon feather icon-star warning"></i></a>
+                                {{-- <li class="nav-item d-none d-lg-block"><a class="nav-link bookmark-star"><i class="ficon feather icon-star warning"></i></a> --}}
                                     <div class="bookmark-input search-input">
                                         <div class="bookmark-input-icon"><i class="feather icon-search primary"></i></div>
                                         <input class="form-control input" type="text" placeholder="Explore Vuesax..." tabindex="0" />
@@ -263,7 +263,7 @@
                                                     <form id="logout-form" action="{{ route('logout') }}" method="POST" style="display: none;">
                                                         @csrf
                                                     </form>
-                                             </div>
+                                            </div>
                                     </li>
                          @endif
                         </ul>

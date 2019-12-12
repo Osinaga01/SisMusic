@@ -4,7 +4,9 @@ namespace App\Http\Controllers\Contenido;
 
 use Illuminate\Http\Request;
 use App\Http\Controllers\Controller;
+use App\Temario;
 use DB;
+use Auth;
 
 class TemarioController extends Controller
 {
@@ -31,9 +33,15 @@ class TemarioController extends Controller
      *
      * @return \Illuminate\Http\Response
      */
-    public function create()
+    public function create($id)
     {
-        //
+        //dd($id);
+        $curso = DB::table('cursos')
+                    ->join('docentes','docentes.user_id','=','cursos.id_docente')
+                    ->select('cursos.*')
+                    ->where('docentes.user_id','=',$id)
+                    ->get();
+        return view('adm-contenido/temario/create',compact('curso'));
     }
 
     /**
@@ -45,6 +53,19 @@ class TemarioController extends Controller
     public function store(Request $request)
     {
         //
+        $temario = new Temario;
+        $temario->titulo          = $request->titulo;
+        $temario->justicacion     = $request->justificacion;
+        $temario->objetivo        = $request->objetivo;
+        $temario->fecha_revision  = $request->fecha_revision;
+        //$curso->imagen          = $request->imagen;
+        $temario->estado          = 1;
+        $temario->curso_id        = $request->curso_id;
+
+        $temario->save();
+        //dd($curso);
+        //$curso->save();
+        return redirect()->route('temarios.index');
     }
 
     /**
@@ -67,6 +88,14 @@ class TemarioController extends Controller
     public function edit($id)
     {
         //
+        $curso = DB::table('cursos')
+                ->join('docentes','docentes.user_id','=','cursos.id_docente')
+                ->select('cursos.*')
+                ->where('docentes.user_id','=',Auth::user()->id)
+                ->get();
+        $temario = Temario::findOrFail($id);
+        //dd($curso);
+        return view('adm-contenido/temario/edit', compact('temario','curso'));
     }
 
     /**
@@ -79,6 +108,19 @@ class TemarioController extends Controller
     public function update(Request $request, $id)
     {
         //
+        $temario                = Temario::find($id);
+        $temario->titulo        = $request->titulo;
+        $temario->justicacion   = $request->justificacion;
+        $temario->objetivo      = $request->objetivo;
+        $temario->fecha_revision= $request->fecha_revision;
+        $temario->estado        = 1;
+        $temario->curso_id      = $request->curso_id;
+
+        // $image = $request->file('imagen');
+        // $image->move('img', $image->getClientOriginalName());
+        // $curso->imagen = $image->getClientOriginalName();
+        $temario->update();
+        return redirect()->route('temarios.index');
     }
 
     /**
