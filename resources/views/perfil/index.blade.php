@@ -55,7 +55,7 @@
                               <span class="navbar-toggler-icon"><i class="feather icon-align-justify"></i></span>
                           </button>
                           <div class="collapse navbar-collapse" id="navbarSupportedContent">
-                              <ul class="navbar-nav justify-content-around w-75 ml-sm-auto">
+                              {{-- <ul class="navbar-nav justify-content-around w-75 ml-sm-auto">
                                   <li class="nav-item px-sm-0">
                                       <a href="#" class="nav-link font-small-3">Timeline</a>
                                   </li>
@@ -74,62 +74,131 @@
                                   <li class="nav-item px-sm-0">
                                       <a href="#" class="nav-link font-small-3">Events</a>
                                   </li>
-                              </ul>
+                              </ul> --}}
                           </div>
                       </nav>
                   </div>
               </div>
           </div>
       </div>
-      <section id="profile-info">
-          <div class="row">
-              <div class="col-lg-3 col-12">
-                  <div class="card">
-                      <div class="card-header">
-                          <h4>About</h4>
-                          <i class="feather icon-more-horizontal cursor-pointer"></i>
-                      </div>
-                      <div class="card-body">
-                          <p>Tart I love sugar plum I love oat cake. Sweet roll caramels I love jujubes. Topping cake wafer.</p>
-                          <div class="mt-1">
-                              <h6 class="mb-0">Joined:</h6>
-                              <p>November 15, 2015</p>
-                          </div>
-                          <div class="mt-1">
-                              <h6 class="mb-0">Lives:</h6>
-                              <p>New York, USA</p>
-                          </div>
-                          <div class="mt-1">
-                            <h6 class="mb-0">Email:</h6>
-                            <p>{{ $estudiante->name }}</p>
-                          </div>
-                          <div class="mt-1">
-                            <h6 class="mb-0">Email:</h6>
-                            <p>{{ $ap }}</p>
-                          </div>
-                          <div class="mt-1">
-                              <h6 class="mb-0">Email:</h6>
-                              <p>{{ $estudiante->email }}</p>
-                          </div>
-                          <div class="mt-1">
-                              <h6 class="mb-0">Website:</h6>
-                              <p>www.pixinvent.com</p>
-                          </div>
-                          <div class="mt-1">
-                              <button type="button" class="btn btn-sm btn-icon btn-primary mr-25 p-25"><i class="feather icon-facebook"></i></button>
-                              <button type="button" class="btn btn-sm btn-icon btn-primary mr-25 p-25"><i class="feather icon-twitter"></i></button>
-                              <button type="button" class="btn btn-sm btn-icon btn-primary p-25"><i class="feather icon-instagram"></i></button>
-                          </div>
-                      </div>
-                  </div>
+        <section id="profile-info">
+            <div class="row">
+                <div class="col-lg-3 col-12">
+                    <div class="card">
+                        <div class="card-header">
+                            <h4>Informacion Personal</h4>
+                            <i class="feather icon-more-horizontal cursor-pointer"></i>
+                        </div>
+                        <div class="card-body">
+                            {{-- <p>Tart I love sugar plum I love oat cake. Sweet roll caramels I love jujubes. Topping cake wafer.</p> --}}
+                            {{-- <div class="mt-1">
+                                <h6 class="mb-0">Joined:</h6>
+                                <p>November 15, 2015</p>
+                            </div> --}}
+                            <div class="mt-1">
+                                <h6 class="mb-0">Lives:</h6>
+                                <p>New York, USA</p>
+                            </div>
+                            <div class="mt-1">
+                                <h6 class="mb-0">Nombre :</h6>
+                                <p>{{ $estudiante->name }}</p>
+                            </div>
+                            <div class="mt-1">
+                                    <h6 class="mb-0">Apellidos :</h6>
+                                    <p>{{ $ap }}</p>
+                            </div>
+                            {{-- <div class="mt-1">
+                                    <h6 class="mb-0">Nombre :</h6>
+                                    <p>{{ $estudiante->sexo }}</p>
+                                </div>
+                            <div class="mt-1"> --}}
 
-              </div>
+                            <div class="mt-1">
+                                <h6 class="mb-0">Correo :</h6>
+                                <p>{{ $estudiante->email }}</p>
+                            </div>
+                            {{-- <div class="mt-1">
+                                <h6 class="mb-0">Website:</h6>
+                                <p>www.pixinvent.com</p>
+                            </div> --}}
+                            <div class="mt-1">
+                                <button type="button" class="btn btn-sm btn-icon btn-primary mr-25 p-25"><i class="feather icon-facebook"></i></button>
+                                <button type="button" class="btn btn-sm btn-icon btn-primary mr-25 p-25"><i class="feather icon-twitter"></i></button>
+                                <button type="button" class="btn btn-sm btn-icon btn-primary p-25"><i class="feather icon-instagram"></i></button>
+                            </div>
+                        </div>
+                    </div>
 
-          </div>
+                </div>
+                <div class="col-md-9 col-12">
+                        
+                        <section id="ecommerce-products" class="grid-view">
+                                @foreach ($curso as $item)
+                                <div class="card ecommerce-card">
+                                    <div class="card-content">
+                                        <div class="item-img text-center">
+                                            <img class="img-fluid" src="{{asset($item->imagen)}}" alt="img-placeholder">
+                                        </div>
+                                        <div class="card-body">
+                                            <div class="item-wrapper">
+                                                <div class="item-rating">
+                                                    <div class="badge badge-primary badge-md">
+                                                        <span>4</span> <i class="feather icon-star"></i>
+                                                    </div>
+                                                </div>
+                                                <div>
+                                                    <h6 class="item-price">
+                                                        $39.99
+                                                    </h6>
+                                                </div>
+                                            </div>
+                                            <div class="item-name">
+                                                <span>{{ $item->nombre }}</span>
+                                                <p class="item-company">By <span class="company-name">Google</span></p>
+                                            </div>
+                                            <div>
+                                                <p class="item-description">
+                                                    {{ $item->descripcion }}
+                                                </p>
+                                            </div>
+                                        </div>
+                                        <div class="item-options text-center">
+                                            <div class="item-wrapper">
+                                                <div class="item-rating">
+                                                    <div class="badge badge-primary badge-md">
+                                                        <span>4</span> <i class="feather icon-star"></i>
+                                                    </div>
+                                                </div>
+                                                <div class="item-cost">
+                                                    <h6 class="item-price">
+                                                        $39.99
+                                                    </h6>
+                                                </div>
+                                            </div>
+                                            <div class="wishlist">
+                                                <i class="fa fa-heart-o"></i> <span>Me Gusta</span>
+                                            </div>
+                                            <div class="wishlist">
+                                                {{-- <a href="app-ecommerce-checkout.html" class="view-in-cart d-none">View In Cart</a> --}}
+                                                <a href="{{ url('detalle') }}"><i class="fa fa-th-list"></i> <span>Ver Detalle</span></a>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                @endforeach
+                        </section>
+                        
+                </div>
 
-      </section>
-  </div>
+            </div>
+            
 
+        </section>
+       
+  
+  
+ </div>
+    
 </div>
 
 

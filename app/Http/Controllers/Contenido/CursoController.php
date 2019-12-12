@@ -20,7 +20,7 @@ class CursoController extends Controller
     {
         //AGREGANDO LA ACCION A BITACORA
         Auth()->user()->registerBinnacle();
-        
+
         $curso = DB::table('cursos')->get();
         return view('adm-contenido/cursos/index',compact('curso'));
     }
@@ -111,7 +111,7 @@ class CursoController extends Controller
      */
     public function update(Request $request, $id)
     {
-        $curso                  = Cursos::findOrFail($id);
+        $curso                  = Curso::find($id);
         $curso->nombre          = $request->nombre;
         $curso->descripcion     = $request->descripcion;
         $curso->fecha_inicio    = $request->fecha_inicio;
@@ -129,7 +129,7 @@ class CursoController extends Controller
         // $image = $request->file('imagen');
         // $image->move('img', $image->getClientOriginalName());
         // $curso->imagen = $image->getClientOriginalName();
-        $curso->save();
+        $curso->update();
         return redirect()->route('cursos.index');
     }
 
@@ -143,7 +143,7 @@ class CursoController extends Controller
     {
         $curso          = Cursos::find($id);
         $curso->estado  = 0;
-        $curso->save();
+        $curso->update();
         return redirect()->route('cursos.index');
     }
 }

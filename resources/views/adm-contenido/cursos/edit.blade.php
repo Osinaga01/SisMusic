@@ -7,12 +7,13 @@
       <div class="col-12">
           <div class="card">
               <div class="card-header">
-                  <h4 class="card-title">Multiple Column</h4>
+                  <h4 class="card-title">Edicion de Cursos</h4>
               </div>
               <div class="card-content">
                   <div class="card-body">
-                      <form class="form" enctype="multipart/form-data" action="{{ route('cursos.index') }}"  method="post">
-                          @csrf
+                      <form class="form" enctype="multipart/form-data" action="{{ route('cursos.update',$curso->id) }}"  method="post">
+                        @csrf
+                        {{ method_field('PUT') }}
                           <div class="form-body">
                               <div class="row">
                                   <div class="col-md-6 col-12">
@@ -30,7 +31,7 @@
                                       <div class="form-group">
                                           <h3><label for="first-name-icon">Descripcion :</label></h3>
                                           <fieldset class="form-group">
-                                              <textarea class="form-control" id="basicTextarea" value="{{ $curso->descripcion }}" name="descripcion"  placeholder="Descripcion"></textarea>
+                                              <input class="form-control" id="basicTextarea" value="{{ $curso->descripcion }}" name="descripcion"  placeholder="Descripcion"></input>
                                           </fieldset>
                                         </div>
                                   </div>
@@ -67,9 +68,14 @@
                                           <div class="position-relative has-icon-left">
                                               <select class="form-control" id="basicSelect" name="id_docente">
                                                 @foreach ($docente as $item)
-                                                <option value="{{ $item->id }}">{{ $item->nombre }}</option>
+                                                    @if ($item->id == $item->id)
+                                                        <option value="{{ $item->id }}" selected>{{ $item->nombre }}</option>
+                                                    @else
+                                                        <option value="{{ $item->id }}">{{ $item->nombre }}</option>
+                                                    @endif
                                                 @endforeach
                                               </select>
+                                             
                                               <div class="form-control-position">
                                                   <i class="feather icon-user"></i>
                                               </div>

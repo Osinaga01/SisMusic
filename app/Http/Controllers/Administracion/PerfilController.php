@@ -7,6 +7,7 @@ use App\Http\Controllers\Controller;
 
 use App\Profile;
 use App\User;
+use DB;
 
 class PerfilController extends Controller
 {
@@ -19,7 +20,13 @@ class PerfilController extends Controller
     {
         $estudiante = User::find($id);
         $ap = $estudiante->perfil->apellidos;
-        return view('perfil.index',compact('estudiante','ap'));
+        $curso = DB::select("SELECT cursos.*
+                                FROM users, perfils, estudiantes, inscripcions, cursos
+                                WHERE users.id = perfils.user_id and perfils.user_id = estudiantes.user_id AND
+                                estudiantes.user_id = inscripcions.estudiante_id and cursos.id = inscripcions.curso_id AND
+                                estudiantes.user_id = $id");
+        //dd($curso);
+        return view('perfil.index',compact('estudiante','ap','curso'));
     }
 
     /**

@@ -41,6 +41,7 @@ Auth::routes();
 Route::group(['middleware' => ['auth']], function() {
     
     Route::get('sismusic','Administracion\DashboardController@publicViewDashboard');
+    Route::get('detalle/{id}','Administracion\DashboardController@detalleCurso');
     Route::get('adm','Administracion\DashboardController@adminViewDashboard');
     Route::resource('adm/roles','Administracion\RoleController');
     Route::resource('adm/users','Administracion\UserController');

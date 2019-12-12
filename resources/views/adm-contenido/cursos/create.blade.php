@@ -11,8 +11,9 @@
               </div>
               <div class="card-content">
                   <div class="card-body">
-                      <form class="form" enctype="multipart/form-data" action="{{ route('cursos.update') }}"  method="post">
+                      <form class="form" enctype="multipart/form-data" action="{{ route('cursos.store') }}"  method="post">
                           @csrf
+                          
                           <div class="form-body">
                               <div class="row">
                                   <div class="col-md-6 col-12">

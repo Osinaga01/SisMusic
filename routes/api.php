@@ -20,3 +20,5 @@ Route::middleware('auth:api')->get('/user', function (Request $request) {
 Route::get('lista/cursos', 'Api\CursosController@listaCursos');
 Route::get('lista/temarios', 'Api\CursosController@selectTemarioCurso');
 Route::get('lista/temas', 'Api\CursosController@selectTemaTemario');
+Route::get('perfil', 'Api\PerfilController@selectPerfil');
+Route::get('cursos/inscrito', 'Api\CursosInscritoController@selectCursosInscrito');
